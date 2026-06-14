@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Lora:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply border-gray-200 dark:border-gray-800;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  overflow-x: hidden;
+}
+
+body {
+  @apply bg-white dark:bg-navy-900 text-navy-900 dark:text-white transition-colors duration-300;
+  font-feature-settings: 'rlig' 1, 'calt' 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* Glass morphism effect */
+.glass {
+  @apply bg-white/80 dark:bg-navy-800/80 backdrop-blur-md border border-white/30 dark:border-white/10;
+}
+
+.glass-light {
+  @apply bg-white/50 dark:bg-white/5 backdrop-blur-sm border border-white/20 dark:border-white/5;
+}
+
+/* Gradient effects */
+.gradient-navy-teal {
+  @apply bg-gradient-to-r from-navy-700 via-navy-600 to-teal-600;
+}
+
+.gradient-teal-light {
+  @apply bg-gradient-to-br from-teal-50 to-white dark:from-navy-800 dark:to-navy-900;
+}
+
+/* Text utilities */
+.text-gradient {
+  background: linear-gradient(135deg, #1a2f4a 0%, #00a99d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-reverse {
+  background: linear-gradient(135deg, #00a99d 0%, #1a2f4a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Smooth transitions */
+.transition-smooth {
+  @apply transition-all duration-300 ease-smooth;
+}
+
+/* Link hover effects */
+a {
+  @apply transition-colors duration-200;
+}
+
+a:hover {
+  @apply text-teal-600 dark:text-teal-400;
+}
+
+/* Selection color */
+::selection {
+  @apply bg-teal-200 dark:bg-teal-900 text-navy-900 dark:text-white;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-navy-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-400 dark:bg-navy-700 rounded-full hover:bg-gray-500 dark:hover:bg-navy-600;
+}
+
+/* Form elements */
+input, textarea, select {
+  @apply bg-white dark:bg-navy-800 border-gray-300 dark:border-gray-700 text-navy-900 dark:text-white focus:border-teal-500 dark:focus:border-teal-400 focus:ring-teal-500 dark:focus:ring-teal-400;
+}
+
+input::placeholder {
+  @apply text-gray-500 dark:text-gray-400;
+}
+
+/* Button base styles */
+.btn-base {
+  @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium transition-smooth duration-300 cursor-pointer min-h-[44px] min-w-[44px];
+}
+
+/* Mobile optimized buttons */
+@media (max-width: 640px) {
+  .btn-base {
+    @apply px-4 py-3 text-sm min-h-[48px];
+  }
+}
+
+.btn-primary {
+  @apply btn-base bg-teal-600 hover:bg-teal-700 text-white shadow-elevation-2 hover:shadow-elevation-3;
+}
+
+.btn-secondary {
+  @apply btn-base bg-navy-700 hover:bg-navy-800 text-white shadow-elevation-2 hover:shadow-elevation-3;
+}
+
+.btn-outline {
+  @apply btn-base border-2 border-teal-600 text-teal-600 hover:bg-teal-50 dark:hover:bg-navy-800;
+}
+
+/* Card styles */
+.card {
+  @apply bg-white dark:bg-navy-800 rounded-2xl shadow-elevation-1 hover:shadow-elevation-3 transition-smooth border border-gray-100 dark:border-gray-700;
+}
+
+.card-glass {
+  @apply glass rounded-2xl shadow-glass dark:shadow-glass-dark;
+}
+
+/* Heading styles */
+h1, h2, h3, h4, h5, h6 {
+  @apply font-display font-bold;
+}
+
+h1 {
+  @apply text-display-xl md:text-display-lg;
+}
+
+h2 {
+  @apply text-display-md md:text-display-lg;
+}
+
+h3 {
+  @apply text-headline;
+}
+
+h4 {
+  @apply text-title;
+}
+
+/* Premium shadows */
+.shadow-premium {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.shadow-premium-lg {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Backdrop blur effect */
+.backdrop-blur-glass {
+  backdrop-filter: blur(8px) brightness(1.05);
+  -webkit-backdrop-filter: blur(8px) brightness(1.05);
+}
+
+/* Animation delays */
+.animate-delay-100 {
+  animation-delay: 100ms;
+}
+
+.animate-delay-200 {
+  animation-delay: 200ms;
+}
+
+.animate-delay-300 {
+  animation-delay: 300ms;
+}
+
+.animate-delay-400 {
+  animation-delay: 400ms;
+}
+
+.animate-delay-500 {
+  animation-delay: 500ms;
+}
+
+/* Responsive utilities */
+@media (max-width: 640px) {
+  h1 {
+    @apply text-3xl;
+  }
+
+  h2 {
+    @apply text-2xl;
+  }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    @apply hidden;
+  }
+}
+
+/* Focus states for accessibility */
+:focus-visible {
+  @apply outline-2 outline-offset-2 outline-teal-600 dark:outline-teal-400;
+}
+
+/* Loading animation */
+@keyframes shimmerLoad {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.animate-shimmer {
+  animation: shimmerLoad 2s infinite;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 1000px 100%;
+}
+
+dark .animate-shimmer {
+  background: linear-gradient(90deg, #1a2f4a 25%, #0f1f2e 50%, #1a2f4a 75%);
+}
