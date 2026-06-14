@@ -52,7 +52,7 @@ export default function Contact() {
             Get in Touch
           </h2>
           <p className="text-lg text-navy-600 dark:text-gray-400 max-w-2xl mx-auto">
-            We're here to help. Reach out through any of the following channels.
+            We&apos;re here to help. Reach out through any of the following channels.
           </p>
         </motion.div>
 
@@ -166,7 +166,7 @@ export default function Contact() {
                 Need Emergency Care?
               </h4>
               <p className="text-sm text-navy-600 dark:text-gray-400 mb-4">
-                Call us immediately for any surgical emergency. We're available 24/7.
+                Call us immediately for any surgical emergency. We&apos;re available 24/7.
               </p>
               <motion.a
                 href={`tel:${DOCTOR_INFO.phone}`}

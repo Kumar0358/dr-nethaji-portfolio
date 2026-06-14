@@ -165,7 +165,7 @@ export default function Appointment() {
                 </motion.button>
 
                 <p className="text-xs text-navy-600 dark:text-gray-400 text-center">
-                  We'll contact you within 24 hours to confirm your appointment.
+                  We&apos;ll contact you within 24 hours to confirm your appointment.
                 </p>
               </form>
             ) : (
@@ -179,7 +179,7 @@ export default function Appointment() {
                   Thank You!
                 </h3>
                 <p className="text-navy-600 dark:text-gray-400 mb-4">
-                  Your appointment request has been received. We'll contact you shortly to confirm.
+                  Your appointment request has been received. We&apos;ll contact you shortly to confirm.
                 </p>
               </motion.div>
             )}
