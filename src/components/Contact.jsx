@@ -24,7 +24,7 @@ export default function Contact() {
     {
       icon: FiMapPin,
       label: 'Location',
-      value: 'Spandana Hospital, Patna',
+      value: 'Spandana Hospital, Dharmavaram',
       href: '#',
       description: DOCTOR_INFO.clinicAddress
     },
