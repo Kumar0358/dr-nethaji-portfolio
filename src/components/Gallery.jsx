@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { FiSearch, FiX } from 'react-icons/fi';
 import { staggerContainer, staggerItem } from '@/utils/animations';
@@ -84,10 +85,11 @@ export default function Gallery() {
             >
               {/* Image */}
               <div className="relative h-64 md:h-72 overflow-hidden bg-gray-200 dark:bg-navy-800">
-                <img
+                <Image
                   src={item.image}
                   alt={item.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-300"
                 />
               </div>
 
@@ -134,9 +136,11 @@ export default function Gallery() {
               </button>
 
               {/* Image */}
-              <img
+              <Image
                 src={selectedImage.image}
                 alt={selectedImage.title}
+                width={800}
+                height={600}
                 className="w-full h-auto rounded-2xl"
               />
 

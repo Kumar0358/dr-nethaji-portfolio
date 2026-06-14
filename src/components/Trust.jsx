@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiChevronLeft, FiChevronRight, FiStar } from 'react-icons/fi';
 import { staggerContainer, staggerItem } from '@/utils/animations';
@@ -106,15 +107,17 @@ export default function Trust() {
 
                 {/* Quote */}
                 <p className="text-lg md:text-xl text-navy-900 dark:text-white font-light leading-relaxed mb-8 italic">
-                  "{TESTIMONIALS[currentTestimonial].feedback}"
+                  &quot;{TESTIMONIALS[currentTestimonial].feedback}&quot;
                 </p>
 
                 {/* Author */}
                 <div className="flex items-center gap-4 border-t border-gray-200 dark:border-gray-700 pt-6">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-teal-500 to-navy-600 flex-shrink-0">
-                    <img
+                  <div className="relative w-12 h-12 rounded-full bg-gradient-to-br from-teal-500 to-navy-600 flex-shrink-0 overflow-hidden">
+                    <Image
                       src={TESTIMONIALS[currentTestimonial].image}
                       alt={TESTIMONIALS[currentTestimonial].name}
+                      width={48}
+                      height={48}
                       className="w-full h-full rounded-full object-cover"
                     />
                   </div>

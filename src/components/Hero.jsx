@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { FiArrowRight } from 'react-icons/fi';
 import { staggerContainer, staggerItem } from '@/utils/animations';
 import { DOCTOR_INFO } from '@/utils/constants';
@@ -132,10 +133,13 @@ export default function Hero() {
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 3, repeat: Infinity }}
               >
-                <img
+                <Image
                   src="https://via.placeholder.com/500x600?text=Dr.+Nethaji"
                   alt="Dr. Kancham Nethaji"
+                  width={500}
+                  height={600}
                   className="w-full h-auto object-cover"
+                  priority
                 />
                 {/* Overlay gradient for premium effect */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
