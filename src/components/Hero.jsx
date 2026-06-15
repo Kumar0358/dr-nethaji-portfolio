@@ -134,7 +134,7 @@ export default function Hero() {
                 transition={{ duration: 3, repeat: Infinity }}
               >
                 <Image
-                  src="https://via.placeholder.com/500x600?text=Dr.+Nethaji"
+                  src="src\public\images\netajihome.png"
                   alt="Dr. Kancham Nethaji"
                   width={500}
                   height={600}
